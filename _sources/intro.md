@@ -2,20 +2,25 @@
 myst:
   substitutions:
     socius: |
-      ```{image} socius_logo.png
+      ```{image} images/socius_logo.png
       :alt: socius
       :height: 28px
       ```
     the_odi: |
-      ```{image} odi_logo.png
+      ```{image} images/odi_logo.png
       :alt: the Open Data Institute
       :height: 28px
+      ```
+    icwsm: |
+      ```{image} images/ICWSM_logo.svg
+        :alt: ICWSM 2024
+        :height: 35px
       ```
 ---
 
 # Welcome 
 
-Welcome to ICWSM 2024! 
+Welcome to [the 18th International AAAI Conference on Web and Social Media](https://icwsm.org/2024/index.html/)! 
 
 We're thrilled to present our tutorial **Scraping Reddit the Right Way: A Guide to Legal and Ethical Data Collection with RedditHarbor**. This tutorial is co-organized by socius and the Open Data Institute, featuring:
 
@@ -27,9 +32,17 @@ The tutorial has three parts. First, we'll introduce the ODI's Global Data Infra
 
 We hope you find this tutorial to be a valuable learning experience! To promote open science, this documentation is intended as an ongoing reference for both ICWSM 2024 attendees and researchers who couldn't make it this year. Please reach out to research@socius.org with any questions or feedback. We're happy to help fellow computational social scientists continue ethical and legal Reddit research even after the conference.
 
+```{admonition} For ICWSM 2024 attendees 
+:class: warning 
+ICWSM attendees MUST have the [prerequisites](../redditharbor/prerequisites.md) for taking part in the hands-on activities during this tutorial. Please ensure you have the necessary prerequisites in place before. If you have any questions or encounter any difficulties, please don't hesitate to contact us at research@socius.org.
+```
 
 ```{tableofcontents}
 ```
+
+*hosted at:*
+
+[{{icwsm}}](https://icwsm.org/2024/)
 
 *co-organised by:*
 

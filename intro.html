@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="Prerequisites" href="redditharbor/prerequisites.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -139,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/ICWSM_logo.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/ICWSM_logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/aaai.jpeg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/aaai.jpeg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -154,10 +154,30 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Prerequisites</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/prerequisites.html">Prerequisites</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Global Data Infrastructure Typology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="gdi/pt1.html">GDI part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdi/pt2.html">GDI part 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ethical and Legal Reddit Research</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/legal.html">Legal Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/ethics.html">Ethical Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/guideline.html">Best-practises</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hands-on RedditHarbor</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho1.html">Reddit Harbor part 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="redditharbor/ho2.html">Reddit Harbor part 2</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="redditharbor/ho3.html">Reddit Harbor part 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redditharbor/ho4.html">Reddit Harbor part 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho5.html">Reddit Harbor part 5</a></li>
 </ul>
 
     </div>
@@ -212,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/socius-org/RedditHarbor" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -229,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/socius-org/RedditHarbor/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +375,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="welcome">
 <h1>Welcome<a class="headerlink" href="#welcome" title="Permalink to this headline">#</a></h1>
-<p>Welcome to ICWSM 2024!</p>
+<p>Welcome to <a class="reference external" href="https://icwsm.org/2024/index.html/">the 18th International AAAI Conference on Web and Social Media</a>!</p>
 <p>We’re thrilled to present our tutorial <strong>Scraping Reddit the Right Way: A Guide to Legal and Ethical Data Collection with RedditHarbor</strong>. This tutorial is co-organized by socius and the Open Data Institute, featuring:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://nick-sh-oh.github.io/">Nick Oh</a>, Principal Researcher at socius</p></li>
@@ -364,13 +384,41 @@ document.write(`
 </ul>
 <p>The tutorial has three parts. First, we’ll introduce the ODI’s Global Data Infrastructure typology, providing a big picture view of platform data access - from APIs to data trusts and more. Next, we’ll focus specifically on Reddit, discussing how to collect and use Reddit data ethically and legally. Finally, we’ll provide hands-on training for RedditHarbor, a scraping toolkit designed to streamline Reddit data collection seamlessly.</p>
 <p>We hope you find this tutorial to be a valuable learning experience! To promote open science, this documentation is intended as an ongoing reference for both ICWSM 2024 attendees and researchers who couldn’t make it this year. Please reach out to <a class="reference external" href="mailto:research&#37;&#52;&#48;socius&#46;org">research<span>&#64;</span>socius<span>&#46;</span>org</a> with any questions or feedback. We’re happy to help fellow computational social scientists continue ethical and legal Reddit research even after the conference.</p>
+<div class="warning admonition">
+<p class="admonition-title">For ICWSM 2024 attendees </p>
+<p>ICWSM attendees MUST have the <a class="reference internal" href="redditharbor/prerequisites.html"><span class="doc std std-doc">prerequisites</span></a> for taking part in the hands-on activities during this tutorial. Please ensure you have the necessary prerequisites in place before. If you have any questions or encounter any difficulties, please don’t hesitate to contact us at <a class="reference external" href="mailto:research&#37;&#52;&#48;socius&#46;org">research<span>&#64;</span>socius<span>&#46;</span>org</a>.</p>
+</div>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Prerequisites</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/prerequisites.html">Prerequisites</a></li>
 </ul>
 </div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Global Data Infrastructure Typology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gdi/pt1.html">GDI part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdi/pt2.html">GDI part 2</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ethical and Legal Reddit Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/legal.html">Legal Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/ethics.html">Ethical Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/guideline.html">Best-practises</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hands-on RedditHarbor</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho1.html">Reddit Harbor part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho2.html">Reddit Harbor part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho5.html">Reddit Harbor part 5</a></li>
+</ul>
+</div>
+<p><em>hosted at:</em></p>
+<p><a class="reference external" href="https://icwsm.org/2024/"><img alt="ICWSM 2024" height="35px" src="_images/ICWSM_logo.svg" /></a></p>
 <p><em>co-organised by:</em></p>
 <p><a class="reference external" href="https://socius.org/"><img alt="socius" src="_images/socius_logo.png" style="height: 28px;" /></a> <a class="reference external" href="https://theodi.org/"><img alt="the Open Data Institute" src="_images/odi_logo.png" style="height: 28px;" /></a></p>
 </section>
@@ -407,11 +455,11 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
-       href="markdown.html"
+       href="redditharbor/prerequisites.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Prerequisites</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -443,7 +491,7 @@ By socius
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2024.
       <br/>
     
   </p>
