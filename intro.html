@@ -172,12 +172,13 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hands-on RedditHarbor</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="redditharbor/ho1.html">Reddit Harbor part 1</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="redditharbor/ho2.html">Reddit Harbor part 2</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="redditharbor/ho3.html">Reddit Harbor part 3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="redditharbor/ho4.html">Reddit Harbor part 4</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="redditharbor/ho2.html">Scraping Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="redditharbor/ho3.html">Collect Subreddit-based Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redditharbor/ho4.html">Collect Keyword-based Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redditharbor/ho5.html">Collect User-based Data</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho5.html">Reddit Harbor part 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho6.html">Reddit Harbor part 5</a></li>
 </ul>
 
     </div>
@@ -382,45 +383,24 @@ document.write(`
 <li><p><a class="reference external" href="https://theodi.org/profile/sasha-moriniere/">Sasha Moriniere</a>, Researcher at the Open Data Institute</p></li>
 <li><p><a class="reference external" href="https://theodi.org/profile/jared-robert-keller/">Jared Keller</a>, Head of Research at the Open Data Institute</p></li>
 </ul>
-<p>The tutorial has three parts. First, we’ll introduce the ODI’s Global Data Infrastructure typology, providing a big picture view of platform data access - from APIs to data trusts and more. Next, we’ll focus specifically on Reddit, discussing how to collect and use Reddit data ethically and legally. Finally, we’ll provide hands-on training for RedditHarbor, a scraping toolkit designed to streamline Reddit data collection seamlessly.</p>
+<p>The tutorial has three parts over the course of 2 hours. First, we’ll introduce the ODI’s Global Data Infrastructure typology, providing a big picture view of platform data access - from APIs to data trusts and more. Next, we’ll focus specifically on Reddit, discussing how to collect and use Reddit data ethically and legally. Finally, we’ll provide hands-on training for RedditHarbor, a scraping toolkit designed to streamline Reddit data collection seamlessly.</p>
 <p>We hope you find this tutorial to be a valuable learning experience! To promote open science, this documentation is intended as an ongoing reference for both ICWSM 2024 attendees and researchers who couldn’t make it this year. Please reach out to <a class="reference external" href="mailto:research&#37;&#52;&#48;socius&#46;org">research<span>&#64;</span>socius<span>&#46;</span>org</a> with any questions or feedback. We’re happy to help fellow computational social scientists continue ethical and legal Reddit research even after the conference.</p>
 <div class="warning admonition">
 <p class="admonition-title">For ICWSM 2024 attendees </p>
-<p>ICWSM attendees MUST have the <a class="reference internal" href="redditharbor/prerequisites.html"><span class="doc std std-doc">prerequisites</span></a> for taking part in the hands-on activities during this tutorial. Please ensure you have the necessary prerequisites in place before. If you have any questions or encounter any difficulties, please don’t hesitate to contact us at <a class="reference external" href="mailto:research&#37;&#52;&#48;socius&#46;org">research<span>&#64;</span>socius<span>&#46;</span>org</a>.</p>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Prerequisites</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="redditharbor/prerequisites.html">Prerequisites</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Global Data Infrastructure Typology</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gdi/pt1.html">GDI part 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gdi/pt2.html">GDI part 2</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ethical and Legal Reddit Research</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="redditharbor/legal.html">Legal Considerations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="redditharbor/ethics.html">Ethical Considerations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="redditharbor/guideline.html">Best-practises</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hands-on RedditHarbor</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho1.html">Reddit Harbor part 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho2.html">Reddit Harbor part 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="redditharbor/ho5.html">Reddit Harbor part 5</a></li>
-</ul>
+<p><strong>ICWSM attendees MUST have the <a class="reference internal" href="redditharbor/prerequisites.html"><span class="doc std std-doc">prerequisites</span></a> before attending this tutorial. The hands-on activities require having the prerequisites set up beforehand. If you have any questions or encounter any difficulties, please don’t hesitate to contact us at <a class="reference external" href="mailto:research&#37;&#52;&#48;socius&#46;org">research<span>&#64;</span>socius<span>&#46;</span>org</a>.</strong></p>
 </div>
 <p><em>hosted at:</em></p>
 <p><a class="reference external" href="https://icwsm.org/2024/"><img alt="ICWSM 2024" height="35px" src="_images/ICWSM_logo.svg" /></a></p>
 <p><em>co-organised by:</em></p>
 <p><a class="reference external" href="https://socius.org/"><img alt="socius" src="_images/socius_logo.png" style="height: 28px;" /></a> <a class="reference external" href="https://theodi.org/"><img alt="the Open Data Institute" src="_images/odi_logo.png" style="height: 28px;" /></a></p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
