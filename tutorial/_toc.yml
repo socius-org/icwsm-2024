@@ -23,4 +23,5 @@ parts:
       sections: 
       - file: redditharbor/ho3
       - file: redditharbor/ho4
-    - file: redditharbor/ho5
+      - file: redditharbor/ho5
+    - file: redditharbor/ho6
