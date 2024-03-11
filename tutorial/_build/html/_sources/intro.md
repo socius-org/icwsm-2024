@@ -39,7 +39,8 @@ We hope you find this tutorial to be a valuable learning experience! To promote 
 
 *hosted at:*
 
-[{{icwsm}}](https://icwsm.org/2024/)
+JUNE 3RD – 6TH 2024
+BUFFALO, NEW YORK, USA
 
 *co-organised by:*
 
