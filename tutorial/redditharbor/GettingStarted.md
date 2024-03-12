@@ -1,23 +1,119 @@
 # <picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" alt="⚙" width="32" height="32"></picture> Getting Started
 
-#### Navigating 🧭 the complexities of APIs and data collection can be a daunting task, especially for researchers 👨‍💻 with limited coding backgrounds. RedditHarbor **simplifies collecting 📥 Reddit data and saving it to a database**. It **removes the complexity** of working with APIs 🏗️, letting you easily build a "harbor" of Reddit data for analysis.
+## Installation 
 
-![redditharbor_demo](https://github.com/socius-org/RedditHarbor/assets/130935698/7bb4f570-90f7-4e6c-a469-7e8debf9a260)
+To begin, install the RedditHarbor package using pip in your terminal:
 
-[RedditHarbor](https://github.com/socius-org/RedditHarbor/) is designed for researchers who want to focus on their analysis rather than grappling with technical complexities. While [PRAW](https://praw.readthedocs.io/en/stable/) offers flexibility for advanced users, RedditHarbor simplifies the process, allowing you to effortlessly collect the data you need through intuitive commands.
-
-Here's how RedditHarbor empowers your research:
-
-* **✨ Comprehensive Data Collection**: Connect directly to the Reddit API and gather submissions, comments, and user profiles with ease.
-* **🔒 Privacy-Focused**: Anonymise any personally identifiable information (PII) to protect user privacy and comply with ethical research practices and IRB requirements.
-* **📦 Organised Data Storage**: Store your collected data in a secure database that you control, ensuring accessibility and organisation.
-* **📈 Scalable and Efficient**: Handle pagination seamlessly, even for large datasets with millions of rows. 
-* **🕹️ Customisable Collection**: Tailor your data collection to your specific needs by configuring parameters.
-* **📂 Analysis-Ready**: Export your database to CSV, JSON, or JPEG formats for effortless integration with your preferred analysis tools.
-
-With RedditHarbor, you can spend less time wrestling with technical hurdles and more time focusing on your research objectives. 
-
-```{admonition} Why Reddit? 
-:class: tip
-While there are various social media platforms and data APIs available, our focus will be solely on Reddit. This decision is driven by several key reasons, but primarily because Reddit is currently the *only* platform that provides data for academic research. Facebook terminated most API access years ago in the wake of the [Cambridge Analytica data scandal](https://en.wikipedia.org/wiki/Facebook%E2%80%93Cambridge_Analytica_data_scandal), and Twitter (now X) has [effectively closed the door on academic research](https://www.theverge.com/2023/5/31/23739084/twitter-elon-musk-api-policy-chilling-academic-research).
+```python
+# Requires Python 3.9 or higher
+pip install redditharbor
 ```
+
+Additionally, run `pip install redditharbor[pii]` to enable anonymising any personally identifiable information (PII) from the collected data.
+
+## Setting Up Supabase Tables
+
+Next, we need to create three tables in Supabase to store the user, submission, and comment data from Reddit. For testing purposes, we'll name them "test_redditor", "test_submission", and "test_comment".
+
+1. Head to the [Supabase Dashboard](https://app.supabase.com) and open the "SQL Editor" from the sidebar.
+2. Click "New Query" to start a new SQL query.
+3. Copy and paste the following table creation SQL, then run it:
+
+```sql
+-- Create table test_redditor
+CREATE TABLE test_redditor (
+    redditor_id varchar primary key,
+    name varchar,
+    created_at timestamptz,
+    karma jsonb,
+    is_gold boolean,
+    is_mod jsonb,
+    trophy jsonb,
+    removed varchar
+);
+
+-- Enable row-level security on test_redditor
+ALTER TABLE test_redditor ENABLE ROW LEVEL SECURITY;
+
+-- Create table test_submission
+CREATE TABLE test_submission (
+    submission_id varchar primary key,
+    redditor_id varchar,
+    created_at timestamptz,
+    title varchar,
+    text text,
+    subreddit varchar,
+    permalink varchar,
+    attachment jsonb,
+    flair jsonb,
+    awards jsonb,
+    score jsonb,
+    upvote_ratio jsonb,
+    num_comments jsonb,
+    edited boolean,
+    archived boolean,
+    removed boolean,
+    poll jsonb
+); 
+
+-- Enable row-level security on test_submission
+ALTER TABLE test_submission ENABLE ROW LEVEL SECURITY;
+
+-- Create table test_comment
+CREATE TABLE test_comment(
+    comment_id varchar primary key,
+    link_id varchar,
+    subreddit varchar, 
+    parent_id varchar,
+    redditor_id varchar,
+    created_at timestamptz,
+    body text,
+    score jsonb,
+    edited boolean,
+    removed varchar
+); 
+
+-- Enable row-level security on test_comment
+ALTER TABLE test_comment ENABLE ROW LEVEL SECURITY;
+```
+
+This will create the three tables with the necessary columns and data types. Once created, you'll see the new tables available in the "Table Editor". In the future, you can duplicate and rename these tables (instead of "test_...") for your production needs.
+
+```{warning} 
+The RedditHarbor package depends on predefined column names for all user, submission, and comment tables. To ensure proper functionality, it's crucial to create tables with all the specified columns mentioned in the documentation. Failure to do so may lead to errors or incomplete data retrieval.
+```
+
+## Setting Up for Data Collection
+
+To start collecting Reddit data, create a new Python file in your folder (e.g., `run.py`). Running the code directly in Jupyter Notebook is not recommended, as it may cause errors.
+
+Copy and paste the following code block, which serves as a template to set up RedditHarbor:
+
+```python
+import redditharbor.login as login
+from redditharbor.dock.pipeline import collect
+
+# Configure authentication
+SUPABASE_URL = "<your-supabase-url>"
+SUPABASE_KEY = "<your-supabase-api-key>"  # Use "service_role/secret" key, not "anon/public"
+REDDIT_PUBLIC = "<your-reddit-public-key>"
+REDDIT_SECRET = "<your-reddit-secret-key>"
+REDDIT_USER_AGENT = "<your-reddit-user-agent>"  # Format: <institution:project-name (u/reddit-username)>
+# e.g. REDDIT_USER_AGENT = "LondonSchoolofEconomics:ICWSM-tutorial (u/reddit-username)" 
+
+# Define database table names
+DB_CONFIG = {
+    "user": "test_redditor",
+    "submission": "test_submission",
+    "comment": "test_comment"
+}
+
+# Login and create instances of Reddit and Supabase clients
+reddit_client = login.reddit(public_key=REDDIT_PUBLIC, secret_key=REDDIT_SECRET, user_agent=REDDIT_USER_AGENT)
+supabase_client = login.supabase(url=SUPABASE_URL, private_key=SUPABASE_KEY)
+
+# Initialise an instance of the `collect` class
+collect = collect(reddit_client=reddit_client, supabase_client=supabase_client, db_config=DB_CONFIG)
+```
+
+Now you're ready to start collecting Reddit data!

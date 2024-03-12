@@ -18,10 +18,11 @@ parts:
     - file: redditharbor/guideline
   - caption: Hands-on RedditHarbor 
     chapters:
+    - file: redditharbor/Intro
     - file: redditharbor/GettingStarted
     - file: redditharbor/ScrapingExamples
       sections: 
       - file: redditharbor/subreddit
       - file: redditharbor/keyword
-      - file: redditharbor/user
+      - file: redditharbor/database
     - file: redditharbor/download
