@@ -34,7 +34,7 @@ We hope you find this tutorial to be a valuable learning experience! To promote 
 
 ```{admonition} For ICWSM 2024 attendees 
 :class: warning 
-**ICWSM attendees MUST have the [prerequisites](../redditharbor/prerequisites.md) before attending this tutorial. The hands-on activities require having the prerequisites set up beforehand. If you have any questions or encounter any difficulties along the way, raising a GitHub issue ([here](https://github.com/socius-org/RedditHarbor/issues)) is the fastest way to receive support from our team. Or alternatively, please don't hesitate to contact us at research@socius.org.**
+**ICWSM attendees MUST have the [prerequisites](../redditharbor/prerequisites.md) before attending this tutorial. The hands-on activities require having the prerequisites set up beforehand. If you have any questions or encounter any difficulties along the way, raising a GitHub issue ([here](https://github.com/socius-org/RedditHarbor/issues)) is the fastest way to receive support from our team.**
 ```
 
 *hosted at:*

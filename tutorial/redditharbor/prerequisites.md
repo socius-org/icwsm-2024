@@ -8,6 +8,11 @@ For a smooth experience during the ICWSM tutorial, please ensure you have the fo
 
 2. **Register as a Developer**: Follow [Reddit's API guide](https://www.reddit.com/wiki/api/) to [register as a developer](https://reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164). This step is necessary to create a script app and obtain the required credentials for API access.
 
+```{image} ../images/reddit_register.png
+:width: 400px
+:align: center
+```
+
 3. **Create a Script App**: Once registered as a developer, create a [script app](https://old.reddit.com/prefs/apps/). This will provide you with the `PUBLIC_KEY` and `SECRET_KEY` credentials needed to authenticate with the Reddit API during the tutorial.
 
 ```{image} ../images/reddit_createapp.png
@@ -26,6 +31,8 @@ For a smooth experience during the ICWSM tutorial, please ensure you have the fo
 :align: center
 ```
 
+3. **Access Credentials**: Make a note of the database URL and `SECRET_KEY` provided in the "Project Settings > Configuration > API" section. You will need these credentials to connect and store the Reddit data during the tutorial.
+
 ```{image} ../images/supabase_apikey.png
 :width: 400px
 :align: center
@@ -43,7 +50,7 @@ For a smooth experience during the ICWSM tutorial, please ensure you have the fo
 
 3. **Install Python Extension (for Visual Studio Code users)**: If you're using Visual Studio Code, open the editor and navigate to the sidebar (or press `Ctrl+Shift+X`). Search for "python" in the Extensions Marketplace and install the Python extension.
 
-## 🔣 Command Prompt (Windows Users)
+## Command Prompt (Windows Users)
 
 If you're a Windows user, we recommend using Git Bash, one of the best command prompts for a Linux-style command-line experience. Follow these steps:
 
