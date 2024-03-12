@@ -24,9 +24,9 @@ Welcome to [the 18th International AAAI Conference on Web and Social Media](http
 
 We're thrilled to present our tutorial **Scraping Reddit the Right Way: A Guide to Legal and Ethical Data Collection with RedditHarbor**. This tutorial is co-organized by socius and the Open Data Institute, featuring:
 
-- [Nick Oh](https://nick-sh-oh.github.io/), Principal Researcher at socius  
-- [Sasha Moriniere](https://theodi.org/profile/sasha-moriniere/), Researcher at the Open Data Institute
-- [Jared Keller](https://theodi.org/profile/jared-robert-keller/), Head of Research at the Open Data Institute
+- Nick Oh, Principal Researcher at socius  
+- Sasha Moriniere, Researcher at the Open Data Institute
+- Jared Keller, Head of Research at the Open Data Institute
 
 The tutorial has three parts over the course of 2 hours. First, we'll introduce the ODI's Global Data Infrastructure typology, providing a big picture view of platform data access - from APIs to data trusts and more. Next, we'll focus specifically on Reddit, discussing how to collect and use Reddit data ethically and legally. Finally, we'll provide hands-on training for RedditHarbor, a scraping toolkit designed to streamline Reddit data collection seamlessly. 
 
@@ -39,8 +39,9 @@ We hope you find this tutorial to be a valuable learning experience! To promote 
 
 *hosted at:*
 
-JUNE 3RD – 6TH 2024
 BUFFALO, NEW YORK, USA
+<br>
+(JUNE 3RD – 6TH 2024)
 
 *co-organised by:*
 
