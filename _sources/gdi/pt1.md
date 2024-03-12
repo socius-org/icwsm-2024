@@ -6,7 +6,7 @@ As our societies run on data to drive decisions and insights, we need a robust g
 * **🌳** Combat climate change
 * **📝** Support evidence-based policies  
 * **📵** Fight online exploitation & disinfo
-* **👥** Confront societal polarization
+* **👥** Confront societal polarisation
 
 Building this global infrastructure is no easy task though. It requires coordinating across:
 * **🗺️** Borders

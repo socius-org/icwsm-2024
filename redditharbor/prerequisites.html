@@ -174,17 +174,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ethical and Legal Reddit Research</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="legal.html"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2696_fe0f/512.webp" type="image/webp"/><img alt="⚖" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/2696_fe0f/512.gif" width="32"/></picture> Legal Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal.html"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.webp" type="image/webp"/><img alt="🧐" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.gif" width="32"/></picture> Legal Considerations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ethics.html">Ethical Considerations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="guideline.html">Best Practises</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hands-on RedditHarbor</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="GettingStarted.html"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp" type="image/webp"/><img alt="⚙" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" width="32"/></picture> Getting Started</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ScrapingExamples.html">Scraping Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="subreddit.html">Collect Subreddit-based Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keyword.html">Collect Keyword-based Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user.html">Collect User-based Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subreddit.html">Collecting Subreddit-based Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyword.html">Collecting Keyword-based Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database-Driven Data Collection</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Data</a></li>
@@ -384,7 +385,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reddit-api">👨‍💻 Reddit API</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supabase-api">📦 Supabase API</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-setup">🖥️ Environment Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt-windows-users">Command Prompt (Windows Users)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt-windows-users">🔣 Command Prompt (Windows Users)</a></li>
 </ul>
             </nav>
         </div>
@@ -403,25 +404,33 @@ document.write(`
 <h2>👨‍💻 Reddit API<a class="headerlink" href="#reddit-api" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Create a Reddit Account</strong>: You will need a Reddit account to access the Reddit API. If you don’t have one already, head over to <a class="reference external" href="https://www.reddit.com/">reddit.com</a> and sign up for a new account.</p></li>
-<li><p><strong>Register as a Developer</strong>: Follow <a class="reference external" href="https://www.reddit.com/wiki/api/">Reddit’s API guide</a> to <a class="reference external" href="https://reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164">register as a developer</a>. This step is necessary to create a script app and obtain the required credentials for API access.</p></li>
+<li><p><strong>Register as a Developer</strong>: Follow <a class="reference external" href="https://www.reddit.com/wiki/api/">Reddit’s API guide</a> to <a class="reference external" href="https://reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164">register as a developer</a>. This step is necessary to create a script app and obtain the required credentials for API access.
+<br></p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/reddit_register.png"><img alt="../_images/reddit_register.png" class="align-center" src="../_images/reddit_register.png" style="width: 400px;" /></a>
+<br>
 <ol class="arabic simple" start="3">
-<li><p><strong>Create a Script App</strong>: Once registered as a developer, create a <a class="reference external" href="https://old.reddit.com/prefs/apps/">script app</a>. This will provide you with the <code class="docutils literal notranslate"><span class="pre">PUBLIC_KEY</span></code> and <code class="docutils literal notranslate"><span class="pre">SECRET_KEY</span></code> credentials needed to authenticate with the Reddit API during the tutorial.</p></li>
+<li><p><strong>Create a Script App</strong>: Once registered as a developer, create a <a class="reference external" href="https://old.reddit.com/prefs/apps/">script app</a>. This will provide you with the <code class="docutils literal notranslate"><span class="pre">PUBLIC_KEY</span></code> and <code class="docutils literal notranslate"><span class="pre">SECRET_KEY</span></code> credentials needed to authenticate with the Reddit API during the tutorial.
+<br></p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/reddit_createapp.png"><img alt="../_images/reddit_createapp.png" class="align-center" src="../_images/reddit_createapp.png" style="width: 400px;" /></a>
+<br>
 </section>
 <section id="supabase-api">
 <h2>📦 Supabase API<a class="headerlink" href="#supabase-api" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Sign Up for Supabase</strong>: Visit <a class="reference external" href="https://supabase.com/">supabase.com</a> and sign up for a new account. This will allow you to create a project and obtain the necessary credentials for storing the Reddit data.</p></li>
-<li><p><strong>Create a New Project</strong>: After signing up, create a new project in Supabase. This will generate a database <code class="docutils literal notranslate"><span class="pre">URL</span></code> and a <code class="docutils literal notranslate"><span class="pre">SECRET_KEY</span></code> (<code class="docutils literal notranslate"><span class="pre">service_role</span></code>) for your project.</p></li>
+<li><p><strong>Create a New Project</strong>: After signing up, create a new project in Supabase. This will generate a database <code class="docutils literal notranslate"><span class="pre">URL</span></code> and a <code class="docutils literal notranslate"><span class="pre">SECRET_KEY</span></code> (<code class="docutils literal notranslate"><span class="pre">service_role</span></code>) for your project.
+<br></p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/supabase_createnewproject.png"><img alt="../_images/supabase_createnewproject.png" class="align-center" src="../_images/supabase_createnewproject.png" style="width: 400px;" /></a>
+<br>
 <ol class="arabic simple" start="3">
-<li><p><strong>Access Credentials</strong>: Make a note of the database URL and <code class="docutils literal notranslate"><span class="pre">SECRET_KEY</span></code> provided in the “Project Settings &gt; Configuration &gt; API” section. You will need these credentials to connect and store the Reddit data during the tutorial.</p></li>
+<li><p><strong>Access Credentials</strong>: Access database <code class="docutils literal notranslate"><span class="pre">URL</span></code> and <code class="docutils literal notranslate"><span class="pre">SECRET_KEY</span></code> provided in the “Project Settings &gt; Configuration &gt; API” section. You will need these credentials to connect and store the Reddit data during the tutorial.
+<br></p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/supabase_apikey.png"><img alt="../_images/supabase_apikey.png" class="align-center" src="../_images/supabase_apikey.png" style="width: 400px;" /></a>
+<br>
 </section>
 <section id="environment-setup">
 <h2>🖥️ Environment Setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">#</a></h2>
@@ -439,7 +448,7 @@ document.write(`
 </ol>
 </section>
 <section id="command-prompt-windows-users">
-<h2>Command Prompt (Windows Users)<a class="headerlink" href="#command-prompt-windows-users" title="Permalink to this headline">#</a></h2>
+<h2>🔣 Command Prompt (Windows Users)<a class="headerlink" href="#command-prompt-windows-users" title="Permalink to this headline">#</a></h2>
 <p>If you’re a Windows user, we recommend using Git Bash, one of the best command prompts for a Linux-style command-line experience. Follow these steps:</p>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://gitforwindows.org/">Download Git Bash</a></p></li>
@@ -521,7 +530,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reddit-api">👨‍💻 Reddit API</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supabase-api">📦 Supabase API</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-setup">🖥️ Environment Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt-windows-users">Command Prompt (Windows Users)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt-windows-users">🔣 Command Prompt (Windows Users)</a></li>
 </ul>
   </nav></div>
 

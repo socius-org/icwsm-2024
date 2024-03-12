@@ -22,7 +22,7 @@ myst:
 
 Welcome to [the 18th International AAAI Conference on Web and Social Media](https://icwsm.org/2024/index.html/)! 
 
-We're thrilled to present our tutorial **Scraping Reddit the Right Way: A Guide to Legal and Ethical Data Collection with RedditHarbor**. This tutorial is co-organized by socius and the Open Data Institute, featuring:
+We're thrilled to present our tutorial **Scraping Reddit the Right Way: A Guide to Legal and Ethical Data Collection with RedditHarbor**. This tutorial is co-organised by socius and the Open Data Institute, featuring:
 
 - Nick Oh, Principal Researcher at socius  
 - Sasha Moriniere, Researcher at the Open Data Institute

@@ -72,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Scraping Examples" href="ScrapingExamples.html" />
-    <link rel="prev" title="Best Practises" href="guideline.html" />
+    <link rel="prev" title="Introduction" href="Intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -174,17 +174,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ethical and Legal Reddit Research</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="legal.html"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2696_fe0f/512.webp" type="image/webp"/><img alt="⚖" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/2696_fe0f/512.gif" width="32"/></picture> Legal Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legal.html"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.webp" type="image/webp"/><img alt="🧐" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.gif" width="32"/></picture> Legal Considerations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ethics.html">Ethical Considerations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="guideline.html">Best Practises</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hands-on RedditHarbor</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp" type="image/webp"/><img alt="⚙" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" width="32"/></picture> Getting Started</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ScrapingExamples.html">Scraping Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="subreddit.html">Collect Subreddit-based Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keyword.html">Collect Keyword-based Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user.html">Collect User-based Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subreddit.html">Collecting Subreddit-based Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyword.html">Collecting Keyword-based Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database-Driven Data Collection</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Data</a></li>
@@ -381,7 +382,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-complexities-of-apis-and-data-collection-can-be-a-daunting-task-especially-for-researchers-with-limited-coding-backgrounds-redditharbor-simplifies-collecting-reddit-data-and-saving-it-to-a-database-it-removes-the-complexity-of-working-with-apis-letting-you-easily-build-a-harbor-of-reddit-data-for-analysis">Navigating 🧭 the complexities of APIs and data collection can be a daunting task, especially for researchers 👨‍💻 with limited coding backgrounds. RedditHarbor <strong>simplifies collecting 📥 Reddit data and saving it to a database</strong>. It <strong>removes the complexity</strong> of working with APIs 🏗️, letting you easily build a “harbor” of Reddit data for analysis.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-supabase-tables">Setting Up Supabase Tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-for-data-collection">Setting Up for Data Collection</a></li>
 </ul>
             </nav>
         </div>
@@ -395,24 +398,117 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="picture-source-srcset-https-fonts-gstatic-com-s-e-notoemoji-latest-2699-fe0f-512-webp-type-image-webp-img-src-https-fonts-gstatic-com-s-e-notoemoji-latest-2699-fe0f-512-gif-alt-width-32-height-32-picture-getting-started">
 <h1><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" alt="⚙" width="32" height="32"></picture> Getting Started<a class="headerlink" href="#picture-source-srcset-https-fonts-gstatic-com-s-e-notoemoji-latest-2699-fe0f-512-webp-type-image-webp-img-src-https-fonts-gstatic-com-s-e-notoemoji-latest-2699-fe0f-512-gif-alt-width-32-height-32-picture-getting-started" title="Permalink to this headline">#</a></h1>
-<section id="navigating-the-complexities-of-apis-and-data-collection-can-be-a-daunting-task-especially-for-researchers-with-limited-coding-backgrounds-redditharbor-simplifies-collecting-reddit-data-and-saving-it-to-a-database-it-removes-the-complexity-of-working-with-apis-letting-you-easily-build-a-harbor-of-reddit-data-for-analysis">
-<h2>Navigating 🧭 the complexities of APIs and data collection can be a daunting task, especially for researchers 👨‍💻 with limited coding backgrounds. RedditHarbor <strong>simplifies collecting 📥 Reddit data and saving it to a database</strong>. It <strong>removes the complexity</strong> of working with APIs 🏗️, letting you easily build a “harbor” of Reddit data for analysis.<a class="headerlink" href="#navigating-the-complexities-of-apis-and-data-collection-can-be-a-daunting-task-especially-for-researchers-with-limited-coding-backgrounds-redditharbor-simplifies-collecting-reddit-data-and-saving-it-to-a-database-it-removes-the-complexity-of-working-with-apis-letting-you-easily-build-a-harbor-of-reddit-data-for-analysis" title="Permalink to this headline">#</a></h2>
-<p><img alt="redditharbor_demo" src="https://github.com/socius-org/RedditHarbor/assets/130935698/7bb4f570-90f7-4e6c-a469-7e8debf9a260" /></p>
-<p><a class="reference external" href="https://github.com/socius-org/RedditHarbor/">RedditHarbor</a> is designed for researchers who want to focus on their analysis rather than grappling with technical complexities. While <a class="reference external" href="https://praw.readthedocs.io/en/stable/">PRAW</a> offers flexibility for advanced users, RedditHarbor simplifies the process, allowing you to effortlessly collect the data you need through intuitive commands.</p>
-<p>Here’s how RedditHarbor empowers your research:</p>
-<ul class="simple">
-<li><p><strong>✨ Comprehensive Data Collection</strong>: Connect directly to the Reddit API and gather submissions, comments, and user profiles with ease.</p></li>
-<li><p><strong>🔒 Privacy-Focused</strong>: Anonymise any personally identifiable information (PII) to protect user privacy and comply with ethical research practices and IRB requirements.</p></li>
-<li><p><strong>📦 Organised Data Storage</strong>: Store your collected data in a secure database that you control, ensuring accessibility and organisation.</p></li>
-<li><p><strong>📈 Scalable and Efficient</strong>: Handle pagination seamlessly, even for large datasets with millions of rows.</p></li>
-<li><p><strong>🕹️ Customisable Collection</strong>: Tailor your data collection to your specific needs by configuring parameters.</p></li>
-<li><p><strong>📂 Analysis-Ready</strong>: Export your database to CSV, JSON, or JPEG formats for effortless integration with your preferred analysis tools.</p></li>
-</ul>
-<p>With RedditHarbor, you can spend less time wrestling with technical hurdles and more time focusing on your research objectives.</p>
-<div class="tip admonition">
-<p class="admonition-title">Why Reddit? </p>
-<p>While there are various social media platforms and data APIs available, our focus will be solely on Reddit. This decision is driven by several key reasons, but primarily because Reddit is currently the <em>only</em> platform that provides data for academic research. Facebook terminated most API access years ago in the wake of the <a class="reference external" href="https://en.wikipedia.org/wiki/Facebook%E2%80%93Cambridge_Analytica_data_scandal">Cambridge Analytica data scandal</a>, and Twitter (now X) has <a class="reference external" href="https://www.theverge.com/2023/5/31/23739084/twitter-elon-musk-api-policy-chilling-academic-research">effectively closed the door on academic research</a>.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
+<p>To begin, install the RedditHarbor package using pip in your terminal:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Requires Python 3.9 or higher</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">redditharbor</span>
+</pre></div>
 </div>
+<p>Additionally, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">redditharbor[pii]</span></code> to enable anonymising any personally identifiable information (PII) from the collected data.</p>
+</section>
+<section id="setting-up-supabase-tables">
+<h2>Setting Up Supabase Tables<a class="headerlink" href="#setting-up-supabase-tables" title="Permalink to this headline">#</a></h2>
+<p>Next, we need to create three tables in Supabase to store the user, submission, and comment data from Reddit. For testing purposes, we’ll name them “test_redditor”, “test_submission”, and “test_comment”.</p>
+<ol class="arabic simple">
+<li><p>Head to the <a class="reference external" href="https://app.supabase.com">Supabase Dashboard</a> and open the “SQL Editor” from the sidebar.</p></li>
+<li><p>Click “New Query” to start a new SQL query.</p></li>
+<li><p>Copy and paste the following table creation SQL, then run it:</p></li>
+</ol>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="c1">-- Create table test_redditor</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">test_redditor</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">redditor_id</span><span class="w"> </span><span class="nb">varchar</span><span class="w"> </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="p">,</span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="n">timestamptz</span><span class="p">,</span>
+<span class="w">    </span><span class="n">karma</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">is_gold</span><span class="w"> </span><span class="nb">boolean</span><span class="p">,</span>
+<span class="w">    </span><span class="n">is_mod</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">trophy</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">removed</span><span class="w"> </span><span class="nb">varchar</span>
+<span class="p">);</span>
+
+<span class="c1">-- Enable row-level security on test_redditor</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">test_redditor</span><span class="w"> </span><span class="n">ENABLE</span><span class="w"> </span><span class="k">ROW</span><span class="w"> </span><span class="k">LEVEL</span><span class="w"> </span><span class="k">SECURITY</span><span class="p">;</span>
+
+<span class="c1">-- Create table test_submission</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">test_submission</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">submission_id</span><span class="w"> </span><span class="nb">varchar</span><span class="w"> </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="p">,</span>
+<span class="w">    </span><span class="n">redditor_id</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="n">timestamptz</span><span class="p">,</span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span>
+<span class="w">    </span><span class="nb">text</span><span class="w"> </span><span class="nb">text</span><span class="p">,</span>
+<span class="w">    </span><span class="n">subreddit</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span>
+<span class="w">    </span><span class="n">permalink</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span>
+<span class="w">    </span><span class="n">attachment</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">flair</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">awards</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">score</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">upvote_ratio</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">num_comments</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">edited</span><span class="w"> </span><span class="nb">boolean</span><span class="p">,</span>
+<span class="w">    </span><span class="n">archived</span><span class="w"> </span><span class="nb">boolean</span><span class="p">,</span>
+<span class="w">    </span><span class="n">removed</span><span class="w"> </span><span class="nb">boolean</span><span class="p">,</span>
+<span class="w">    </span><span class="n">poll</span><span class="w"> </span><span class="n">jsonb</span>
+<span class="p">);</span><span class="w"> </span>
+
+<span class="c1">-- Enable row-level security on test_submission</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">test_submission</span><span class="w"> </span><span class="n">ENABLE</span><span class="w"> </span><span class="k">ROW</span><span class="w"> </span><span class="k">LEVEL</span><span class="w"> </span><span class="k">SECURITY</span><span class="p">;</span>
+
+<span class="c1">-- Create table test_comment</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">test_comment</span><span class="p">(</span>
+<span class="w">    </span><span class="n">comment_id</span><span class="w"> </span><span class="nb">varchar</span><span class="w"> </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="p">,</span>
+<span class="w">    </span><span class="n">link_id</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span>
+<span class="w">    </span><span class="n">subreddit</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">parent_id</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span>
+<span class="w">    </span><span class="n">redditor_id</span><span class="w"> </span><span class="nb">varchar</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="n">timestamptz</span><span class="p">,</span>
+<span class="w">    </span><span class="n">body</span><span class="w"> </span><span class="nb">text</span><span class="p">,</span>
+<span class="w">    </span><span class="n">score</span><span class="w"> </span><span class="n">jsonb</span><span class="p">,</span>
+<span class="w">    </span><span class="n">edited</span><span class="w"> </span><span class="nb">boolean</span><span class="p">,</span>
+<span class="w">    </span><span class="n">removed</span><span class="w"> </span><span class="nb">varchar</span>
+<span class="p">);</span><span class="w"> </span>
+
+<span class="c1">-- Enable row-level security on test_comment</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">test_comment</span><span class="w"> </span><span class="n">ENABLE</span><span class="w"> </span><span class="k">ROW</span><span class="w"> </span><span class="k">LEVEL</span><span class="w"> </span><span class="k">SECURITY</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This will create the three tables with the necessary columns and data types. Once created, you’ll see the new tables available in the “Table Editor”. In the future, you can duplicate and rename these tables (instead of “test_…”) for your production needs.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The RedditHarbor package depends on predefined column names for all user, submission, and comment tables. To ensure proper functionality, it’s crucial to create tables with all the specified columns mentioned in the documentation. Failure to do so may lead to errors or incomplete data retrieval.</p>
+</div>
+</section>
+<section id="setting-up-for-data-collection">
+<h2>Setting Up for Data Collection<a class="headerlink" href="#setting-up-for-data-collection" title="Permalink to this headline">#</a></h2>
+<p>To start collecting Reddit data, create a new Python file in your folder (e.g., <code class="docutils literal notranslate"><span class="pre">run.py</span></code>). Running the code directly in Jupyter Notebook is not recommended, as it may cause errors.</p>
+<p>Copy and paste the following code block, which serves as a template to set up RedditHarbor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">redditharbor.login</span> <span class="k">as</span> <span class="nn">login</span>
+<span class="kn">from</span> <span class="nn">redditharbor.dock.pipeline</span> <span class="kn">import</span> <span class="n">collect</span>
+
+<span class="c1"># Configure authentication</span>
+<span class="n">SUPABASE_URL</span> <span class="o">=</span> <span class="s2">&quot;&lt;your-supabase-url&gt;&quot;</span>
+<span class="n">SUPABASE_KEY</span> <span class="o">=</span> <span class="s2">&quot;&lt;your-supabase-api-key&gt;&quot;</span>  <span class="c1"># Use &quot;service_role/secret&quot; key, not &quot;anon/public&quot;</span>
+<span class="n">REDDIT_PUBLIC</span> <span class="o">=</span> <span class="s2">&quot;&lt;your-reddit-public-key&gt;&quot;</span>
+<span class="n">REDDIT_SECRET</span> <span class="o">=</span> <span class="s2">&quot;&lt;your-reddit-secret-key&gt;&quot;</span>
+<span class="n">REDDIT_USER_AGENT</span> <span class="o">=</span> <span class="s2">&quot;&lt;your-reddit-user-agent&gt;&quot;</span>  <span class="c1"># Format: &lt;institution:project-name (u/reddit-username)&gt;</span>
+<span class="c1"># e.g. REDDIT_USER_AGENT = &quot;LondonSchoolofEconomics:ICWSM-tutorial (u/reddit-username)&quot; </span>
+
+<span class="c1"># Define database table names</span>
+<span class="n">DB_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;test_redditor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;submission&quot;</span><span class="p">:</span> <span class="s2">&quot;test_submission&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;test_comment&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Login and create instances of Reddit and Supabase clients</span>
+<span class="n">reddit_client</span> <span class="o">=</span> <span class="n">login</span><span class="o">.</span><span class="n">reddit</span><span class="p">(</span><span class="n">public_key</span><span class="o">=</span><span class="n">REDDIT_PUBLIC</span><span class="p">,</span> <span class="n">secret_key</span><span class="o">=</span><span class="n">REDDIT_SECRET</span><span class="p">,</span> <span class="n">user_agent</span><span class="o">=</span><span class="n">REDDIT_USER_AGENT</span><span class="p">)</span>
+<span class="n">supabase_client</span> <span class="o">=</span> <span class="n">login</span><span class="o">.</span><span class="n">supabase</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">SUPABASE_URL</span><span class="p">,</span> <span class="n">private_key</span><span class="o">=</span><span class="n">SUPABASE_KEY</span><span class="p">)</span>
+
+<span class="c1"># Initialise an instance of the `collect` class</span>
+<span class="n">collect</span> <span class="o">=</span> <span class="n">collect</span><span class="p">(</span><span class="n">reddit_client</span><span class="o">=</span><span class="n">reddit_client</span><span class="p">,</span> <span class="n">supabase_client</span><span class="o">=</span><span class="n">supabase_client</span><span class="p">,</span> <span class="n">db_config</span><span class="o">=</span><span class="n">DB_CONFIG</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now you’re ready to start collecting Reddit data!</p>
 </section>
 </section>
 
@@ -448,12 +544,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="guideline.html"
+       href="Intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Best Practises</p>
+        <p class="prev-next-title">Introduction</p>
       </div>
     </a>
     <a class="right-next"
@@ -483,7 +579,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-complexities-of-apis-and-data-collection-can-be-a-daunting-task-especially-for-researchers-with-limited-coding-backgrounds-redditharbor-simplifies-collecting-reddit-data-and-saving-it-to-a-database-it-removes-the-complexity-of-working-with-apis-letting-you-easily-build-a-harbor-of-reddit-data-for-analysis">Navigating 🧭 the complexities of APIs and data collection can be a daunting task, especially for researchers 👨‍💻 with limited coding backgrounds. RedditHarbor <strong>simplifies collecting 📥 Reddit data and saving it to a database</strong>. It <strong>removes the complexity</strong> of working with APIs 🏗️, letting you easily build a “harbor” of Reddit data for analysis.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-supabase-tables">Setting Up Supabase Tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-for-data-collection">Setting Up for Data Collection</a></li>
 </ul>
   </nav></div>
 

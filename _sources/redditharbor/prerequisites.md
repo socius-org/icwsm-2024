@@ -7,36 +7,40 @@ For a smooth experience during the ICWSM tutorial, please ensure you have the fo
 1. **Create a Reddit Account**: You will need a Reddit account to access the Reddit API. If you don't have one already, head over to [reddit.com](https://www.reddit.com/) and sign up for a new account.
 
 2. **Register as a Developer**: Follow [Reddit's API guide](https://www.reddit.com/wiki/api/) to [register as a developer](https://reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164). This step is necessary to create a script app and obtain the required credentials for API access.
-
+<br>
 ```{image} ../images/reddit_register.png
 :width: 400px
 :align: center
 ```
+<br>
 
 3. **Create a Script App**: Once registered as a developer, create a [script app](https://old.reddit.com/prefs/apps/). This will provide you with the `PUBLIC_KEY` and `SECRET_KEY` credentials needed to authenticate with the Reddit API during the tutorial.
-
+<br>
 ```{image} ../images/reddit_createapp.png
 :width: 400px
 :align: center
 ```
+<br>
 
 ## 📦 Supabase API
 
 1. **Sign Up for Supabase**: Visit [supabase.com](https://supabase.com/) and sign up for a new account. This will allow you to create a project and obtain the necessary credentials for storing the Reddit data.
 
 2. **Create a New Project**: After signing up, create a new project in Supabase. This will generate a database `URL` and a `SECRET_KEY` (`service_role`) for your project.
-
+<br>
 ```{image} ../images/supabase_createnewproject.png
 :width: 400px
 :align: center
 ```
+<br>
 
-3. **Access Credentials**: Make a note of the database URL and `SECRET_KEY` provided in the "Project Settings > Configuration > API" section. You will need these credentials to connect and store the Reddit data during the tutorial.
-
+3. **Access Credentials**: Access database `URL` and `SECRET_KEY` provided in the "Project Settings > Configuration > API" section. You will need these credentials to connect and store the Reddit data during the tutorial.
+<br>
 ```{image} ../images/supabase_apikey.png
 :width: 400px
 :align: center
 ```
+<br>
 
 ## 🖥️ Environment Setup
 
@@ -50,7 +54,7 @@ For a smooth experience during the ICWSM tutorial, please ensure you have the fo
 
 3. **Install Python Extension (for Visual Studio Code users)**: If you're using Visual Studio Code, open the editor and navigate to the sidebar (or press `Ctrl+Shift+X`). Search for "python" in the Extensions Marketplace and install the Python extension.
 
-## Command Prompt (Windows Users)
+## 🔣 Command Prompt (Windows Users)
 
 If you're a Windows user, we recommend using Git Bash, one of the best command prompts for a Linux-style command-line experience. Follow these steps:
 
