@@ -8,4 +8,4 @@ The final frontier where Reddit's [explicit permission](https://www.redditinc.co
 
 ## 🔐 User Privacy Laws
 
-Reddit users [grant an implicit license for public content](https://www.reddit.com/policies/privacy-policy) visibility and analysis. But when users delete posts or accounts, the grey area emerges: retaining and using data under [GDPR](https://gdpr-info.eu/art-17-gdpr/) and [CCPA](https://oag.ca.gov/privacy/ccpa#sectiond) becomes a minefield.
+Reddit users [grant an implicit license for public content visibility and analysis](https://www.reddit.com/policies/privacy-policy). But when users delete posts or accounts, the grey area emerges: retaining and using data under [GDPR](https://gdpr-info.eu/art-17-gdpr/) and [CCPA](https://oag.ca.gov/privacy/ccpa#sectiond) becomes a minefield.

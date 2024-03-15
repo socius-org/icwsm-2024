@@ -8,8 +8,8 @@ Academic research involving human subjects demands adherence to ethical principl
 
 ## 📝 Informed Consent
 
-While [Reddit's User Agreement](https://www.redditinc.com/policies/user-agreement) grants broad rights, it doesn't cover third-party research use. Researchers should (ideally) obtain explicit user consent before using public Reddit content, upholding ethical standards. But what about [Hawthorne Effect](https://en.wikipedia.org/wiki/Hawthorne_effect)? 
+While [Reddit's User Agreement](https://www.redditinc.com/policies/user-agreement) grants broad rights, it doesn't cover third-party research use. Researchers should (*ideally*) obtain explicit user consent before using public Reddit content, upholding ethical standards. But what about [Hawthorne Effect](https://en.wikipedia.org/wiki/Hawthorne_effect)? 
 
 ## 🕵️‍♀️ Anonymity
 
-Scraping certain Reddit forums could expose highly sensitive personal data, requiring controlled access and anonymisation. Although Reddit deems public information accessible, users often expect privacy and anonymity. Researchers must anonymise user data and preserve user privacy with unwavering commitment.
+Scraping certain Reddit forums could expose highly sensitive personal data, requiring controlled access and anonymisation. Although Reddit deems public information accessible, [users often expect privacy and anonymity](https://journals.sagepub.com/doi/full/10.1177/2056305118763366).
