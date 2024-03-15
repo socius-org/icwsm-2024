@@ -1,6 +1,6 @@
-# Key Focus Areas
+# Enabling Data for Global Impact
 
-The Open Data Institute is at the forefront of building a robust global data infrastructure to fuel high-impact research. **During the tutorial, we will give an overview of how to access platform data for research that benefits the public.** Below, we have gathered more readings that look at key topics related to this.
+## During the tutorial, we will give a **big-picture overview of how to access 🔑 platform data for research that benefits the public 🤝.** Below, we have gathered additional readings that look at key topics related to this.
 
 ## 💼 Enabling Access to Privately Held Data
 How can we responsibly open up access to data troves currently siloed within private entities? This data could fuel public-interest research tackling global challenges through [private-public partnerships](https://www.data4sdgs.org/initiatives/unlocking-privately-held-data-public-good), [legislation](https://www.eu-data-act.com/), [safe data institutions](https://icebreakerone.org/open-net-zero/), or [privacy-enhancing tech](https://socialscience.one/our-facebook-partnership).

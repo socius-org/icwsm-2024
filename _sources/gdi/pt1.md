@@ -1,4 +1,4 @@
-# <picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f30d/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f30d/512.gif" alt="🌍" width="32" height="32"></picture> [Enabling Data for Global Impact](https://theodi.org/insights/projects/global-data-infrastructure/) 
+# <picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f30d/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f30d/512.gif" alt="🌍" width="32" height="32"></picture> Introduction 
 
 #### Data is the **new oil 📈 powering our world**. From stats and maps 📍 to real-time sensors 📶 and experiment results 🔬, **responsibly collecting, managing and sharing data** has become critical.
 
