@@ -15,4 +15,4 @@ Building this global infrastructure is no easy task though. It requires coordina
 * **👨‍💻** Technical standards
 * **📜** Legal regimes
 
-Aligning all those stakeholders with different goals & systems is a complex challenge. The Open Data Institute's [#GlobalDataInfrastructure](https://theodi.org/insights/projects/global-data-infrastructure/) investigates how **researchers can break down barriers and unlock cross-boundary collaboration for research tackling global challenges**. 
+Aligning all those stakeholders with different goals & systems is a complex challenge. The ODI's [#GlobalDataInfrastructure](https://theodi.org/insights/projects/global-data-infrastructure/) investigates how **researchers can break down barriers and unlock cross-boundary collaboration for research tackling global challenges**. 
