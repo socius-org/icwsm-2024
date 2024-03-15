@@ -26,7 +26,7 @@ We're thrilled to present our tutorial **Scraping Reddit the Right Way: A Guide 
 
 - Nick Oh, Principal Researcher at socius  
 - Sasha Moriniere, Researcher at the Open Data Institute
-- Jared Keller, Head of Research at the Open Data Institute
+- Jared Keller, Principal Researcher at the Open Data Institute
 
 The tutorial has three parts over the course of 2 hours. First, we'll introduce the ODI's Global Data Infrastructure typology, providing *a big picture view of platform data access for public interest research* - from APIs to data trusts and more. Next, we'll focus specifically on Reddit, discussing *how to collect and use Reddit data ethically and legally*. Finally, we'll provide hands-on training for RedditHarbor, *a scraping toolkit designed to streamline Reddit data collection seamlessly*. 
 
