@@ -13,9 +13,10 @@ parts:
     - file: gdi/pt2 
   - caption: Ethical and Legal Reddit Research
     chapters: 
-    - file: redditharbor/legal
-    - file: redditharbor/ethics 
-    - file: redditharbor/guideline
+    - file: legal_ethics/Intro
+    - file: legal_ethics/legal
+    - file: legal_ethics/ethics 
+    - file: legal_ethics/guideline
   - caption: Hands-on RedditHarbor 
     chapters:
     - file: redditharbor/Intro
