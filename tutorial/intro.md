@@ -28,9 +28,9 @@ We're thrilled to present our tutorial **Scraping Reddit the Right Way: A Guide 
 - Sasha Moriniere, Researcher at the Open Data Institute
 - Jared Keller, Head of Research at the Open Data Institute
 
-The tutorial has three parts over the course of 2 hours. First, we'll introduce the ODI's Global Data Infrastructure typology, providing a big picture view of platform data access - from APIs to data trusts and more. Next, we'll focus specifically on Reddit, discussing how to collect and use Reddit data ethically and legally. Finally, we'll provide hands-on training for RedditHarbor, a scraping toolkit designed to streamline Reddit data collection seamlessly. 
+The tutorial has three parts over the course of 2 hours. First, we'll introduce the ODI's Global Data Infrastructure typology, providing a big picture view of platform data access for public interest research - from APIs to data trusts and more. Next, we'll focus specifically on Reddit, discussing how to collect and use Reddit data ethically and legally. Finally, we'll provide hands-on training for RedditHarbor, a scraping toolkit designed to streamline Reddit data collection seamlessly. 
 
-We hope you find this tutorial to be a valuable learning experience! To promote open science, this documentation is intended as an ongoing reference for both ICWSM 2024 attendees and researchers who couldn't make it this year. Please reach out to research@socius.org with any questions or feedback. We're happy to help fellow computational social scientists continue ethical and legal Reddit research even after the conference.
+We hope you find this tutorial to be a valuable learning experience! To promote open science, this documentation is intended as an ongoing reference for both ICWSM 2024 attendees and researchers who couldn't make it this year. For general inquiries or feedback, please contact research@socius.org. If you have any questions specifically related to the Open Data Institute's [#GlobalDataInfrastructure](https://theodi.org/insights/projects/global-data-infrastructure/) initiative, reach out to sasha.moriniere@theodi.org. We're delighted to assist fellow computational social scientists in navigating the ethical and legal access to platform data, such as Reddit, even after the conclusion of the conference.
 
 ```{admonition} For ICWSM 2024 attendees 
 :class: warning 

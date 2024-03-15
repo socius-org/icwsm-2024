@@ -1,10 +1,10 @@
-# Introduction 
+# <picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" alt="⚙" width="32" height="32"></picture> Introduction 
 
-#### Navigating 🧭 the complexities of APIs and data collection can be a daunting task, especially for researchers 👨‍💻 with limited coding backgrounds. **RedditHarbor simplifies collecting 📥 Reddit data and saving it to a database**. It **removes the complexity** of working with APIs 🏗️, letting you easily build a "harbor" of data for analysis.
+#### Navigating 🧭 the complexities of APIs and data collection can be a daunting task, especially for researchers 👨‍💻 with limited coding backgrounds. **RedditHarbor simplifies collecting Reddit data and saving 📥 it to a database**. It **removes the complexity** of working with APIs 🏗️, letting you easily build a "harbor" of data for analysis.
 
 ![redditharbor_demo](https://github.com/socius-org/RedditHarbor/assets/130935698/7bb4f570-90f7-4e6c-a469-7e8debf9a260)
 
-[RedditHarbor](https://github.com/socius-org/RedditHarbor/) is designed for researchers who want to focus on their analysis rather than grappling with technical complexities. While [PRAW](https://praw.readthedocs.io/en/stable/) offers flexibility for advanced users, RedditHarbor simplifies the process, allowing you to effortlessly collect the data you need through intuitive commands.
+[RedditHarbor](https://github.com/socius-org/RedditHarbor/) is designed for researchers who want to focus on their analysis rather than grappling with technical complexities. While third party API tools, such as [PRAW](https://praw.readthedocs.io/en/stable/), offer flexibility for advanced users, RedditHarbor simplifies the process, allowing you to effortlessly collect the data you need through intuitive commands.
 
 Here's how RedditHarbor empowers your research:
 

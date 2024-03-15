@@ -180,8 +180,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hands-on RedditHarbor</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp" type="image/webp"/><img alt="⚙" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" width="32"/></picture> Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Intro.html"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp" type="image/webp"/><img alt="⚙" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" width="32"/></picture> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">Getting Started</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="ScrapingExamples.html">Scraping Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Collecting Subreddit-based Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="keyword.html">Collecting Keyword-based Data</a></li>
@@ -383,11 +383,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-data-from-specific-subreddits-whether-you-re-interested-in-submissions-comments-or-user-information">Collect data from specific subreddits 📚, whether you’re interested in submissions, comments, or user information.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-submissions-and-users">Collect Submissions and Users</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-comments-and-users">Collect Comments and Users</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-submissions-comments-and-users">Collect Submissions, Comments, and Users</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-submissions-and-users">Collect Submissions and Users</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-comments-and-users">Collect Comments and Users</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-submissions-comments-and-users">Collect Submissions, Comments, and Users</a></li>
 </ul>
             </nav>
         </div>
@@ -421,8 +419,9 @@ document.write(`
 <p class="admonition-title">Supported PII Entities </p>
 <p>PII is identified and anonymised using Microsoft’s <a class="reference external" href="https://microsoft.github.io/presidio/">presidio</a>. Setting <code class="docutils literal notranslate"><span class="pre">mask_pii</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> will automatically mask <a class="reference external" href="https://microsoft.github.io/presidio/supported_entities/">12+ PII entities</a> such as <code class="docutils literal notranslate"><span class="pre">&lt;PERSON&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;PHONE</span> <span class="pre">NUMBER&gt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;EMAIL_ADDRESS&gt;</span></code>. However, while PII is rigorously anonymised to protect privacy, this may inadvertently obscure some entities required for research. For example, “Including food and energy costs, so-called headline PCE actually fell 0.1% on the month and was up just 2.6% from a year ago.” will be saved as “Including food and energy costs, so-called headline PCE actually fell 0.1% on &lt;DATE_TIME&gt; and was up just 2.6% from &lt;DATE_TIME&gt;.”</p>
 </div>
+</section>
 <section id="collect-comments-and-users">
-<h3>Collect Comments and Users<a class="headerlink" href="#collect-comments-and-users" title="Permalink to this headline">#</a></h3>
+<h2>Collect Comments and Users<a class="headerlink" href="#collect-comments-and-users" title="Permalink to this headline">#</a></h2>
 <p>To collect comments and associated user data, use:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="o">.</span><span class="n">subreddit_comment</span><span class="p">(</span><span class="n">subreddits</span><span class="p">,</span> <span class="n">sort_types</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -433,12 +432,11 @@ document.write(`
 </div>
 </section>
 <section id="collect-submissions-comments-and-users">
-<h3>Collect Submissions, Comments, and Users<a class="headerlink" href="#collect-submissions-comments-and-users" title="Permalink to this headline">#</a></h3>
+<h2>Collect Submissions, Comments, and Users<a class="headerlink" href="#collect-submissions-comments-and-users" title="Permalink to this headline">#</a></h2>
 <p>To collect submissions, associated comments, and user data in one go, use:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="o">.</span><span class="n">subreddit_submission_and_comment</span><span class="p">(</span><span class="n">subreddits</span><span class="p">,</span> <span class="n">sort_types</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
 </section>
 </section>
 
@@ -510,11 +508,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-data-from-specific-subreddits-whether-you-re-interested-in-submissions-comments-or-user-information">Collect data from specific subreddits 📚, whether you’re interested in submissions, comments, or user information.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-submissions-and-users">Collect Submissions and Users</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-comments-and-users">Collect Comments and Users</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-submissions-comments-and-users">Collect Submissions, Comments, and Users</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-submissions-and-users">Collect Submissions and Users</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-comments-and-users">Collect Comments and Users</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-submissions-comments-and-users">Collect Submissions, Comments, and Users</a></li>
 </ul>
   </nav></div>
 
