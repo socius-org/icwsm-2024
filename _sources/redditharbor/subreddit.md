@@ -25,7 +25,7 @@ collect.subreddit_submission(subreddits, sort_types, limit=5, mask_pii=True)
 PII is identified and anonymised using Microsoft's [presidio](https://microsoft.github.io/presidio/). Setting `mask_pii` to `True` will automatically mask [12+ PII entities](https://microsoft.github.io/presidio/supported_entities/) such as `<PERSON>`, `<PHONE NUMBER>`, and `<EMAIL_ADDRESS>`. However, while PII is rigorously anonymised to protect privacy, this may inadvertently obscure some entities required for research. For example, "Including food and energy costs, so-called headline PCE actually fell 0.1% on the month and was up just 2.6% from a year ago." will be saved as "Including food and energy costs, so-called headline PCE actually fell 0.1% on <DATE_TIME> and was up just 2.6% from <DATE_TIME>."
 ```
 
-### Collect Comments and Users
+## Collect Comments and Users
 
 To collect comments and associated user data, use:
 
@@ -39,7 +39,7 @@ This will fetch comments from the 5 hottest and 5 top submissions in the specifi
 collect.subreddit_comment(subreddits, sort_types, limit=5, level=None)
 ```
 
-### Collect Submissions, Comments, and Users
+## Collect Submissions, Comments, and Users
 
 To collect submissions, associated comments, and user data in one go, use:
 

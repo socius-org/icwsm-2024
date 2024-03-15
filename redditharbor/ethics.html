@@ -180,8 +180,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Hands-on RedditHarbor</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp" type="image/webp"/><img alt="⚙" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" width="32"/></picture> Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Intro.html"><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp" type="image/webp"/><img alt="⚙" height="32" src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" width="32"/></picture> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">Getting Started</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ScrapingExamples.html">Scraping Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="subreddit.html">Collecting Subreddit-based Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="keyword.html">Collecting Keyword-based Data</a></li>
@@ -359,7 +359,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -375,6 +377,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unleashing-the-ethical-avalanche-such-as-research-integrity-informed-consent-and-anonymity-when-harnessing-reddit-data">Unleashing the ethical avalanche, such as research integrity, informed consent, and anonymity when harnessing Reddit data.</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -386,7 +396,25 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ethical-considerations">
 <h1>Ethical Considerations<a class="headerlink" href="#ethical-considerations" title="Permalink to this headline">#</a></h1>
-<p><strong><picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.gif" alt="🚧" width="20" height="20"></picture></strong></p>
+<section id="unleashing-the-ethical-avalanche-such-as-research-integrity-informed-consent-and-anonymity-when-harnessing-reddit-data">
+<h2>Unleashing the ethical avalanche, such as research integrity, informed consent, and anonymity when harnessing Reddit data.<a class="headerlink" href="#unleashing-the-ethical-avalanche-such-as-research-integrity-informed-consent-and-anonymity-when-harnessing-reddit-data" title="Permalink to this headline">#</a></h2>
+<p><strong>🧠 Research Integrity</strong>:</p>
+<ul class="simple">
+<li><p>Academic research involving human subjects demands adherence to ethical principles like informed consent, opt-outs, and the “do no harm” mantra.</p></li>
+<li><p>Yet, IRBs clash over whether public social media data constitutes human subject research.</p></li>
+</ul>
+<p><strong>📝 Informed Consent</strong>:</p>
+<ul class="simple">
+<li><p>While Reddit’s User Agreement grants broad rights, it doesn’t cover third-party research use.</p></li>
+<li><p>Researchers should (ideally) obtain explicit user consent before using public Reddit content, upholding ethical standards. But what about Hawthorne Effect?</p></li>
+</ul>
+<p><strong>🕵️‍♀️ Anonymity</strong>:</p>
+<ul class="simple">
+<li><p>Scraping certain Reddit forums could expose highly sensitive personal data, requiring controlled access and anonymisation.</p></li>
+<li><p>Although Reddit deems public information accessible, users often expect privacy and anonymity.</p></li>
+<li><p>Researchers must anonymise user data and preserve user privacy with unwavering commitment.</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -447,6 +475,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unleashing-the-ethical-avalanche-such-as-research-integrity-informed-consent-and-anonymity-when-harnessing-reddit-data">Unleashing the ethical avalanche, such as research integrity, informed consent, and anonymity when harnessing Reddit data.</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
